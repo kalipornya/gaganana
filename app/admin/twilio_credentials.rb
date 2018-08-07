@@ -1,4 +1,4 @@
-ActiveAdmin.register TwilioCredential do
+ActiveAdmin.register Credentials do
 
     permit_params :account_sid, :auth_token
 
