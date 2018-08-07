@@ -2,7 +2,7 @@ require 'twilio-ruby'
 
 class LookupController < ApplicationController
     def run
-        @client = Twilio::REST::Client.new(TwilioCredential.first.account_sid, TwilioCredential.first.auth_token)
+        @client = Credential::REST::Client.new(credential.first.account_sid, TwilioCredential.first.auth_token)
         
         Contact.find_each do |c|
             puts 'RUNNING'
